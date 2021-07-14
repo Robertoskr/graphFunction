@@ -28,7 +28,7 @@ void pasarCoordenadas(int arr[], int size){
             int x = b;
             int y = size / 2 - i;
             double height;
-            height = randomFunction(x);
+            height = randomFunction(x); //change this with your own function
             double diff;
             diff = height - double(y);
             if ((diff < 0 && diff > 0.5 ) || (diff > 0 && diff < 0.5) || diff == 0){
@@ -50,4 +50,14 @@ void pasarCoordenadas(int arr[], int size){
         }
             cout << endl;
     }
+}
+
+
+int main(){
+    int size; //Tamaño de la matriz
+    cout << "Whats the extension of the graph (m * n)?: " << endl;
+    cin >> size;
+    int *p;
+    p = new int[size * size];
+    pasarCoordenadas(p, size);
 }
